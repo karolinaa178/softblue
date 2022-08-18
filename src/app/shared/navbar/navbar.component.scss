@@ -1,0 +1,84 @@
+@import "src/variables";
+
+.navbar-container {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 4.5vh;
+  left: 0;
+  padding: 0 6vw;
+  height: fit-content;
+
+  @media all and (min-width: $desktop-breakpoint) {
+    top: 5vh;
+    padding: 0 15vw;
+  }
+
+  .logo {
+    outline: none;
+    cursor: pointer;
+    width: 158px;
+    max-width: calc(82vw - 80px);
+    height: 35px;
+    background: url("~src/assets/logo.png") no-repeat center;
+    background-size: contain;
+  }
+
+  .navbar-wrapper {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2vw;
+
+    @media all and (min-width: $desktop-breakpoint) {
+      display: flex;
+    }
+
+    .navbar-buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      list-style: none;
+
+      .button-wrapper {
+        display: flex;
+        margin-right: 2vw;
+
+        .button-content {
+          text-decoration: initial;
+          font-size: 1rem;
+          line-height: 1.125rem;
+          letter-spacing: 0.063rem;
+          font-weight: 400;
+          color: $main-font-color;
+          padding: 10px 0;
+          //margin-right: 2vw;
+          text-align: center;
+
+          //&:last-child {
+          //  margin-right: 0;
+          //}
+
+          &.active {
+            color: $light-blue-color;
+            text-decoration: line-through;
+          }
+        }
+      }
+
+      .comments-wrapper {
+        //padding: 1.5vh 2vw;
+        margin-right: 0;
+        height: 65px;
+        width: 200px;
+        background-color: $light-blue-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

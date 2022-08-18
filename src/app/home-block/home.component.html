@@ -1,0 +1,60 @@
+<app-navbar (scroll)="onScroll('#comment')"></app-navbar>
+<app-welcome-block></app-welcome-block>
+
+<section class="about-block">
+  <div class="background"></div>
+  <div class="content-wrapper">
+    <div class="title-wrapper">
+      <div class="blue-subtitle">What we do</div>
+      <h3 class="subtitle">Better Services For You</h3>
+      <p class="desc">It is a long established fact that a reader will be distracted by the readable
+      content of a page when looging at its layout. The point of using Lorem Ipsum is that is has.</p>
+    </div>
+
+    <div class="about-elements-wrapper">
+      <div class="element-wrapper" *ngFor="let service of abouts">
+        <div class="icon-background">
+          <div class="icon">
+            <img class="icon-image" src="/assets/laptop-icon.png" alt="icon">
+          </div>
+        </div>
+        <h4 class="element-title">{{service.name}}</h4>
+        <div class="elements-desc">{{service.description}} </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="experience-block">
+  <div class="background"></div>
+  <div class="content-wrapper">
+    <div class="title-wrapper">
+      <h4 class="blue-subtitle">QUALIFICATION</h4>
+      <h3 class="subtitle">My Experience</h3>
+      <p class="desc">It is a long established fact that a reader will be distracted by the readable
+        content of a page when looging at its layout. The point of using Lorem Ipsum is that is has.</p>
+    </div>
+    <div class="experience-wrapper">
+      <div class="block-wrapper" *ngFor="let experience of qualifications">
+          <div class="social-wrapper">
+            <div class="icon-bcg"></div>
+            <div class="name-wrapper">
+              <div class="name">{{experience.company}}</div>
+              <div class="date">
+                <span>{{experience.from | date: 'MMMM y'}}</span> - <span *ngIf="experience.to">{{experience.to | date: 'MMMM y'}}</span>
+              </div>
+            </div>
+          </div>
+        <div class="text-wrapper">
+          <div class="job-desc">{{experience.description}}</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<app-comments-block id="comment"></app-comments-block>
+
+<app-footer></app-footer>

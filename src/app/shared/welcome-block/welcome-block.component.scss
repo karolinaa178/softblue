@@ -1,0 +1,88 @@
+@import "src/variables";
+
+.block {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  background-color: $background-color-one;
+
+  @media all and (min-width: $desktop-breakpoint) {
+    flex-direction: row;
+  }
+
+  .content-wrapper {
+    padding: 15vh 6vw 4vh;
+    display: flex;
+    flex-direction: column;
+
+    @media all and (min-width: $desktop-breakpoint) {
+      padding: 30vh 15vw;
+    }
+
+    .small-subtitle {
+      color: $main-font-color;
+    }
+
+    .subtitle {
+      font-weight: 600;
+      margin: 2.5vh 0;
+      color: $main-font-color;
+
+      &:last-of-type {
+        margin-top: 0;
+      }
+    }
+
+    .subtitle-color{
+      color: $light-blue-color;
+      font-weight: 600;
+    }
+
+    .content-text {
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 2.375rem;
+      color: $main-font-color;
+      padding-left: 1vw;
+
+      li {
+        margin-bottom: 2vh;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .image-panel {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-height: 48vh;
+
+    @media all and (min-width: $desktop-breakpoint) {
+      position: absolute;
+      width: 40%;
+      max-height: none;
+      bottom: 0;
+      top: 15vh;
+    }
+
+    img {
+      max-height: 48vh;
+      width: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+
+      @media all and (min-width: $desktop-breakpoint) {
+        position: absolute;
+        max-height: none;
+        height: 100%;
+        width: 148vw;
+        bottom: 0;
+      }
+    }
+  }
+}

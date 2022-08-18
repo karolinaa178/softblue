@@ -1,0 +1,52 @@
+@import "src/variables";
+
+.service-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color-one;
+
+  @media all and (min-width: $desktop-breakpoint) {
+    flex-direction: row;
+  }
+}
+.content-service-wrapper {
+  padding: 15vh 6vw 4vh;
+  display: flex;
+  flex-direction: column;
+  color: $main-font-color;
+
+  @media all and (min-width: $desktop-breakpoint) {
+    padding: 13vh 15vw;
+  }
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+.blue-subtitle {
+  color: $light-blue-color;
+  text-transform: uppercase;
+  margin-bottom: 1vh;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.subtitle {
+  margin-bottom: 2vh;
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.245rem;
+  column-count: 2;
+  column-gap: 40px;
+}

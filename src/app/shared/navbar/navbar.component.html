@@ -1,0 +1,24 @@
+<div class="navbar-container">
+  <a class="logo" (click)="logoClick($event)"></a>
+  <div class="navbar-wrapper">
+    <ul class="navbar-buttons">
+      <li class="button-wrapper">
+        <a class="button-content" routerLink="/"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{exact: true}">Home</a>
+      </li>
+      <li class="button-wrapper">
+        <a class="button-content" routerLink="/services"
+           routerLinkActive="active">Services</a>
+      </li>
+      <li class="button-wrapper">
+        <a class="button-content" routerLink="/experience"
+           routerLinkActive="active">Exprience</a>
+      </li>
+      <div class="button-wrapper comments-wrapper"
+      (click)="commentClick()">
+        <a class="button-content" routerLink="comment">Comments</a>
+      </div>
+    </ul>
+  </div>
+</div>

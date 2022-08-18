@@ -1,0 +1,51 @@
+<section class="comments-block">
+  <div class="content-comment-wrapper">
+    <div class="subtitle">Comments</div>
+
+    <div class="comments-list-wrapper">
+        <div class="comment-wrapper"  *ngFor="let comment of comments">
+          <div class="date">{{comment.createdAt | date: 'MMM d, y'}}</div>
+          <div class="name-wrapper">
+            <div class="name">{{comment.name}}</div>
+            <div class="email">{{comment.email}}</div>
+          </div>
+          <div class="message">{{comment.content}}</div>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="form-block">
+  <div class="form-block-wrapper">
+    <div class="content-form-wrapper">
+      <div class="subtitle">Add comment</div>
+      <div class="line long-line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="form-wrapper">
+      <form [formGroup]="commentsForm">
+        <div class="form-group">
+          <div class="name-wrapper-row">
+            <input formControlName="name"
+                   type="text"
+                   placeholder="Your Name"
+                   class="name-input"
+                   required>
+            <input formControlName="email"
+                   type="email"
+                   placeholder="Your Email"
+                   class="email-input"
+                   required>
+          </div>
+          <textarea formControlName="content"
+                    placeholder="Your Messages"
+                    class="textarea"
+                    required></textarea>
+        </div>
+      </form>
+      <button class="btn" type="button" (click)="onSubmit()">Send</button>
+    </div>
+
+  </div>
+</section>

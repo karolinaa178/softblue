@@ -1,0 +1,16 @@
+@import "src/variables";
+
+.block {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  background-color: $light-blue-color;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: $main-font-color;
+}

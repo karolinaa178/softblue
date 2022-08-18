@@ -1,0 +1,186 @@
+@import "src/variables";
+
+.about-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color-two;
+
+  @media all and (min-width: $desktop-breakpoint) {
+    flex-direction: row;
+  }
+}
+
+.content-wrapper {
+  padding: 15vh 6vw 4vh;
+  display: flex;
+  flex-direction: column;
+  color: $main-font-color;
+
+  @media all and (min-width: $desktop-breakpoint) {
+    padding: 13vh 15vw;
+  }
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8vh;
+  padding: 0 10vw;
+}
+
+.blue-subtitle {
+  color: $light-blue-color;
+  text-transform: uppercase;
+  margin-bottom: 1vh;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.subtitle {
+  margin-bottom: 2vh;
+}
+
+.desc {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+.about-elements-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media all and (min-width: $desktop-breakpoint) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.element-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4vh;
+
+  @media all and (min-width: $desktop-breakpoint) {
+    width: 20vw;
+    margin-right: 4vw;
+    margin-bottom: 0;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.icon-background {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-color: $light-blue-color;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  height: 40px;
+  top: 32px;
+  left: 33px;
+  user-select: none;
+  z-index: 1;
+}
+
+
+.element-title {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.elements-desc {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+.experience-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color-one;
+
+  @media all and (min-width: $desktop-breakpoint) {
+    flex-direction: row;
+  }
+}
+
+.experience-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+
+  //@media all and (min-width: $desktop-breakpoint) {
+  //  padding: 10vh 10vw;
+  //}
+}
+
+.block-wrapper {
+  min-height: 283px;
+  max-width: 570px;
+  padding: 50px 10px 50px 50px;
+  background-color: $background-color-two;
+}
+
+.social-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.icon-bcg {
+  width: 40px;
+  height: 40px;
+  background-color: $light-blue-color;
+  margin-right: 30px;
+}
+
+.name {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.date {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.job-title {
+  margin-bottom: 24px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.job-desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+
